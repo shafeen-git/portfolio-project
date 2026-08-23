@@ -1,12 +1,13 @@
 import React, { useState, useEffect } from 'react';
 import { Camera, Upload, RefreshCw, Check, User, Sparkles, Shield, MapPin, GraduationCap, Award, ExternalLink, Image as ImageIcon, ZoomIn, X } from 'lucide-react';
 import { PERSONAL_INFO, SOCIAL_PLATFORMS } from '../data/portfolioData';
+import profileImage from '../../Screenshot (102).png';
 
 // Fallback high-fidelity SVG Avatar matching the user's blue polo & sunglasses look
 export const DEFAULT_AVATAR_DATA_URI = "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=600&q=80"; // Fallback fallback
 
 export const ProfilePhotoSection: React.FC = () => {
-  const [profileImg, setProfileImg] = useState<string>('');
+  const [profileImg, setProfileImg] = useState<string>(profileImage);
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [tempUrl, setTempUrl] = useState('');
   const [isDragOver, setIsDragOver] = useState(false);
